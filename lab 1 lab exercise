@@ -5,17 +5,17 @@ public class EmployeeAttendance {
 
         Scanner sc = new Scanner(System.in);
 
-        // Employee ID
+   
         System.out.print("Enter Employee ID: ");
         int employeeId = sc.nextInt();
 
         sc.nextLine();
 
-        // Employee Name
+       
         System.out.print("Enter Employee Name: ");
         String employeeName = sc.nextLine();
 
-        // Attendance for 7 days
+      
         int[] attendance = new int[7];
 
         System.out.println("Enter attendance for 7 days");
@@ -28,7 +28,7 @@ public class EmployeeAttendance {
 
             attendance[i] = sc.nextInt();
 
-            // Validate attendance
+            
             if (attendance[i] != 0 && attendance[i] != 1) {
                 System.out.println("Invalid Attendance Input");
                 return;
@@ -42,10 +42,10 @@ public class EmployeeAttendance {
             }
         }
 
-        // Calculate attendance percentage
+        
         double percentage = (presentDays / 7.0) * 100;
 
-        // Display report
+       
         System.out.println();
         System.out.println("--- Attendance Report ---");
 
@@ -56,7 +56,7 @@ public class EmployeeAttendance {
 
         System.out.println("Absent Days = " + absentDays);
 
-        // Incentive eligibility
+      
         if (percentage >= 90) {
             System.out.println("Eligible for incentive");
         }
