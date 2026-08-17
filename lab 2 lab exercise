@@ -6,43 +6,38 @@ public class CustomerFeedback {
 
         Scanner sc = new Scanner(System.in);
 
-        // Read customer name
+        
         System.out.print("Enter Customer Name: ");
         String customerName = sc.nextLine();
 
-        // Read feedback message
+        
         System.out.print("Enter Feedback Message: ");
         String feedback = sc.nextLine();
 
-        // Read keyword
         System.out.print("Enter Keyword: ");
         String keyword = sc.nextLine();
 
-        // Check whether feedback is empty
+       
         if (feedback.isEmpty()) {
             System.out.println("Invalid Feedback Message");
             return;
         }
 
-        // Check feedback length
         if (feedback.length() > 500) {
             System.out.println("Feedback Exceeds Maximum Length");
             return;
         }
 
-        // Count characters
         int characters = feedback.length();
 
-        // Count words
         String[] words = feedback.trim().split("\\s+");
         int wordCount = words.length;
 
-        // Convert feedback and keyword to lowercase
-        // for case-insensitive searching
+      
+      
         String lowerFeedback = feedback.toLowerCase();
         String lowerKeyword = keyword.toLowerCase();
 
-        // Count keyword occurrences
         int count = 0;
         int index = 0;
 
@@ -51,7 +46,7 @@ public class CustomerFeedback {
             index = index + lowerKeyword.length();
         }
 
-        // Display output
+     
         System.out.println();
         System.out.println("--- Feedback Information ---");
 
